@@ -1,4 +1,21 @@
+# Inventar
 
-Elektronsko vodenje inventarja
+Elektronsko vodenje inventarja (ASSET MANAGEMENT)
 
-Razvili bomo spletno aplikacijo za vodenje inventarja IT opreme v podjetju. Vsi kosi opreme, ki so v inventarju in niso označeni kot potrošni material, so označeni s QR kodo. QR koda vsebuje podatke o opremi npr. Serijsko številko, Product ID, amortizacijsko dobo… Naknadno se nato izpolni tudi v kakšen stanju je posamezen kos opreme. Lahko je v uporabi, v skladišču ali pa zaradi različnih razlogov odstranjen (zlomljen, pokvarjen, prodan). Ob izteku amortizacijske dobe se adminu pošlje obvestilo na mail oz. v prav določen predal sporočil, da ga obvesti o bližnjem izteku življenjske dobe opreme. To sporočilo se lahko pošle 1 leto, 1 mesec ali pa 1 teden prej. Ob skeniranju QR kode, se uporabniku izpiše izkaznica izdelka. Na tej izkaznici je mogoče dodeliti ali pa spremeniti stanje opreme – če je oprema v uporabi ali pa v skladišču. V bazi je tudi seznam zaposlenih katerim se lahko dodeli posamezna oprema.
+
+
+
+-Razvoj spletne aplikacije za vodenje inventarja IT opreme na podjetju, kjer so vsi kosi opreme, ki niso smatrani kot potrošni material označeni s QR kodo kjer se nahajajo vsi podatki z ohišja/embalaže t.j. Serijska številka, Servisna številka(Product ID) amortizacijska doba. Naknadno se potem izpolni stanje kosa opreme ali je v uporabi ali v skladišču ali je bil upokojen(zlomljen, pokvarjen, prodan).  Ob izteku amortizacijske dobe se adminu pošlje obvestilo na mail oz v nek predal sporočil da se izdelku izteče življenska doba (recimo 1 leto prej 1 mesec prej in 1 teden prej). Ob skeniranju QR kode se uporabniku na napravi izpiše izkaznica izdelka. (Na izkaznici je možno dodeliti stanje ali je v uporabi ali skladišču). V bazi je seznam zaposlenih katerim se lahko dodeli lastništvo opreme.
+
+
+React Native
+Generirat je treba QR nalepke z izkaznico asseta
+https://github.com/microsoft/InQRy predlog za generiranje QR kod kjer se potem shranijo informcije (pyhton)
+WebApp za vodenje teh assetov potem v React Native backend pa z nodeom/pyhton?
+Neka baza uporabnikov oz zaposlenih. Rešitev je namenjena izključno za admine. 
+Baza vseh assetov- Asset rabi Model(svoja entiteta?) Serijska številka, številka inventarja(productId), amortizacijska doba.
+Možnost vnosa asseta ob nabavi. Ko se asset upokoji se izbriše iz baze. 
+
+
+
+
