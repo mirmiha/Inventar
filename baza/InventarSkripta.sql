@@ -1,4 +1,3 @@
-/*CREATE DATABASE IF NOT EXISTS Znamenitosti character set utf8 collate utf8_slovenian_ci;*/
 
 DROP TABLE IF exists ZaposlenIma;
 DROP TABLE IF exists Oprema;
