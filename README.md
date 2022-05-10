@@ -17,6 +17,8 @@ Baza vseh assetov- Asset rabi Model(svoja entiteta?) Serijska številka, števil
 <br />
 Možnost vnosa asseta ob nabavi. Ko se asset upokoji se izbriše iz baze. <br />
 
+Še en predlog https://github.com/snipe/snipe-it (Laravel)
+
 
 
 
