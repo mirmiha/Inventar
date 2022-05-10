@@ -5,19 +5,13 @@ DROP TABLE IF exists Stanje;
 DROP TABLE IF exists Zaposleni;
 DROP TABLE IF exists Oddelek;
 
-CREATE TABLE Oddelek(
-idOddelek integer primary key AUTO_INCREMENT,
-naziv VARCHAR(45)
-);
 
 CREATE TABLE Zaposleni(
 idZaposleni integer primary key AUTO_INCREMENT,
 ime VARCHAR(45) NOT NULL,
-priimek VARCHAR(45) NOT NULL,
-oddelek_idOddelek integer 
+priimek VARCHAR(45) NOT NULL
 );
 
-alter table Zaposleni add constraint TK_ID_idOddelek foreign key (oddelek_idOddelek)  references Oddelek(idOddelek);
 
 CREATE TABLE Stanje(
 idStanje integer primary key AUTO_INCREMENT,
@@ -33,7 +27,7 @@ CREATE TABLE Oprema(
 idOprema integer primary key AUTO_INCREMENT,
 serijskaStevilka VARCHAR(45),
 naziv VARCHAR(45) NOT NULL,
-productID integer NOT NULL,
+stevilkaInventarja integer NOT NULL,
 amortizacijskaDoba DATE NOT NULL,
 Stanje_idStanje integer,
 Model_idModel integer
