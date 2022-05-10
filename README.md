@@ -22,3 +22,9 @@ Možnost vnosa asseta ob nabavi. Ko se asset upokoji se izbriše iz baze. <br />
 
 
 
+-cilj je popis inventarja
+-kaj se naredi ob premikih inventure(npr. iz enega oddelka na drugega)
+-kaj se zgodi ob menjavi med dvema zaposlenima
+-kaj se naredi ce ti nekaj odneses domov
+-amortizacija
+-popis inventarja ni enodelni proces

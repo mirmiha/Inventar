@@ -1,4 +1,3 @@
-
 DROP TABLE IF exists ZaposlenIma;
 DROP TABLE IF exists Oprema;
 DROP TABLE IF exists Model;
