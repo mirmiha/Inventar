@@ -67,7 +67,7 @@ export default function DataTable (props: DataTableProps) {
     const [checked, setChecked] = useState<{[k: string]: boolean}>({});
     const [isLoading, setIsLoading] = useState(true);
     const [page, setPage] = useState(1);
-    const [limit, setLimit] = useState(5);
+    const [limit, setLimit] = useState(50);
     const [searchFormValues, setSearchFormValues] = useState<{ [k: string]: string }>(
         searchFormInitialValues || {}
     );
