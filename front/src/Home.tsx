@@ -20,6 +20,7 @@ const Home = () => {
                         <h5 className="card-title">Upravljanje z inventarjem</h5>
                         <p className="card-text">
                             Dodajaj v inventar
+                            
                         </p>
                     </div>
                 </div>

@@ -17,6 +17,11 @@ export default function Navbar() {
                         </li>
 
                         <li className="nav-item">
+                            <NavLink exact to="/login" className="nav-link text-white">Login</NavLink>
+                        </li>
+                        
+
+                        <li className="nav-item">
                             <NavLink to="/categories" className="nav-link text-white">Kategorije</NavLink>
                         </li>
 
