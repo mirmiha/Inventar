@@ -32,9 +32,9 @@ async function products(req: Request, res: Response, next: NextFunction) {
 
 async function create(req: Request, res: Response, next: NextFunction) {
     try {
-        const { categoryId, supplierId, name, serijskaStevilka, stevilkaInventarja, datum, model, description } = req.body;
+        const { categoryId, supplierId, name, serijskaStevilka, stevilkaInventarja, stanje, datum, model, description } = req.body;
         const product = await Product.create({
-            categoryId, supplierId, name, serijskaStevilka, stevilkaInventarja, datum, model, description
+            categoryId, supplierId, name, serijskaStevilka, stevilkaInventarja, stanje, datum, model, description
         });
         if (product.dataValues) {
             return res.status(201).json({ product });
