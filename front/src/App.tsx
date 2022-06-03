@@ -4,6 +4,8 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
+    BrowserRouter,
+    
 } from "react-router-dom";
 import Navbar from "./app/Navbar";
 import {ScrollTop} from "./app/ScrollTop";
@@ -12,8 +14,27 @@ import Home from "./Home";
 import {CategoriesList, AddCategoryForm, EditCategoryForm} from "./features/category";
 import {ProductsList, AddProductForm, EditProductForm} from "./features/product";
 import {SuppliersList, AddSupplierForm, EditSupplierForm} from "./features/supplier";
+import LoginPage from "./login";
+import {initializeApp} from 'firebase/app';
+import { config } from "./config/config";
+import AuthRoute from "./components/AuthRoute";
+
+initializeApp(config.firebaseConfig);
 
 
+export interface IApplicationProps {}
+
+/*
+const Application: React.FunctionComponent<IApplicationProps> = (props) => {
+    return (
+        <BrowserRouter>
+            <Route>
+                <Route path="/home" element={<Home/>}/>
+            </Route>
+        </BrowserRouter>
+    )
+}
+*/
 
 function App() {
     return (
@@ -23,7 +44,11 @@ function App() {
                     <Navbar/>
                     <ScrollTop />
                     <Switch>
+                        <AuthRoute>
                         <Route exact path="/" component={Home} />
+                        
+
+                        <Route exact path="/login"  component={LoginPage} />
 
                         <Route exact path="/categories" component={CategoriesList} />
                         <Route exact path="/categories/create" component={AddCategoryForm} />
@@ -37,6 +62,8 @@ function App() {
                         <Route exact path="/suppliers" component={SuppliersList} />
                         <Route exact path="/suppliers/create" component={AddSupplierForm} />
                         <Route exact path="/suppliers/:supplierId" component={EditSupplierForm} />
+
+                        </AuthRoute>
 
                         
 
