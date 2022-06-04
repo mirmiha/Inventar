@@ -36,6 +36,8 @@ export const EditProductForm = ({ match }: RouteComponentProps<TParams>) => {
         return [{ value: "", label: "Brez zadetkov" }]
     }, [categoriesResult.isSuccess, categoriesResult.data?.categories])
 
+    const stanje = ["Pokvarjeno", "V Uporabi", "V Skladišču"];
+
 const zaposleni = useMemo(() => {
     if (result2.isSuccess && result2.data.suppliers){
         return result2.data.suppliers.map( (supplier: Supplier) => ({ value: supplier.id, label: supplier.name}))
@@ -120,6 +122,8 @@ const zaposleni = useMemo(() => {
                             <Select name="categoryId" label="Izberi kategorijo" options={categories} required={true}>
                                 <option value="">Select a category</option>
                             </Select>
+                            <Select name="stanje" label="Stanje" options={stanje} required={true}><option>stanje...</option></Select>
+
                             <Select name="supplierId" label="Izberi zaposlenega" options={zaposleni} required={true}><option>Izberi zaposlenega</option></Select>
                             <TextArea name="description" label="Opis" />
 

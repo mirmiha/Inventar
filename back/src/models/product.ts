@@ -22,12 +22,20 @@ import { SupplierAttributes } from "./supplier.js";
 
 const {DataTypes} = Seq;
 
+export enum Stanje{
+    broken =  "Pokvarjen",
+    using = "V uporabi",
+    storage = "V Skladišču"
+};
+
+
 export interface ProductAttributes {
     id: string;
     name: string;
     serijskaStevilka: string;
     stevilkaInventarja: string;
     datum: string;
+    stanje: string;
     model: string;
     description?: string;
     readonly createdAt?: Date;
@@ -123,6 +131,11 @@ export const ProductFactory = (sequelize: Sequelize) => {
             type: DataTypes.STRING,
             allowNull: false,
             defaultValue: 0,
+        },
+        stanje:{
+            type: DataTypes.STRING,
+            allowNull:false,
+            defaultValue:"V Skladišču",
         },
         description: {
             type: DataTypes.TEXT,

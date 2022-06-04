@@ -27,9 +27,9 @@ export const ProductSchema = Yup.object().shape({
 
     description: Yup.string()
         .min(5, "Description should be at least 5 characters long")
-        .max(255, "Description should not exceed 255 characters")/*,
+        .max(255, "Description should not exceed 255 characters")
 
-    stanje: Yup.string()
+   /* stanje: Yup.enum()
     .typeError("Unit cost must be a number")
     .required("Unit cost is required")
     .matches(/^[A-Za-z0-9]+$/, "Serijska številka ne sme vsebovati znakov, ki niso številke ali črke")*/

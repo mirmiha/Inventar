@@ -46,6 +46,9 @@ export const AddProductForm = () => {
         return [{value: "", label:"Brez zadtekov"}]
     }, [result2.isSuccess, result2.data?.suppliers])
 
+
+    const stanje = ["Pokvarjeno", "V Uporabi", "V Skladišču"];
+
     const form = (
         <Formik
             initialValues={initialValues}
@@ -84,6 +87,7 @@ export const AddProductForm = () => {
                             <option value="">Izberi kategorijo</option>
                         </Select>
                         <Select name="supplierId" label="Izberi zaposlenega" options={zaposleni} required={true}><option>Izberi zaposlenega</option></Select>
+                        <Select name="stanje" label="Stanje" options={stanje} required={true}><option>stanje...</option></Select>
                         <TextArea name="description" label="Opis" placeholder="Dodaten opis" />
 
                         <button
