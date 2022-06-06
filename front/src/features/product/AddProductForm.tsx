@@ -15,6 +15,7 @@ import { useGetSuppliersQuery } from "../supplier/supplierSlice";
 
 export const AddProductForm = () => {
     const [message, setMessage] = useState<Message | null>(null);
+    const [showSupplier, setShowSupplier] = useState(true);
     const [addNewProduct] = useAddNewProductMutation();
     const result = useGetCategoriesQuery("?limit=all");
     const result2 = useGetSuppliersQuery("?limit=all");
@@ -54,7 +55,10 @@ export const AddProductForm = () => {
             initialValues={initialValues}
             validationSchema={ProductSchema}
             onSubmit={async (values, actions) => {
-                if (values.description === "") { delete values.description; }
+                Object.keys(values).forEach(key=>{
+                    if(values[key]==='')
+                    delete values[key]
+                })
                 try {
                     const {product, error, invalidData} = await addNewProduct(values).unwrap();
                     actions.setSubmitting(false);
@@ -86,8 +90,10 @@ export const AddProductForm = () => {
                         <Select name="categoryId" label="Izberi kategorijo" options={categories} required={true}>
                             <option value="">Izberi kategorijo</option>
                         </Select>
-                        <Select name="supplierId" label="Izberi zaposlenega" options={zaposleni} required={true}><option>Izberi zaposlenega</option></Select>
-                        <Select name="stanje" label="Stanje" options={stanje} required={true}><option>stanje...</option></Select>
+                        {showSupplier && <Select name="supplierId" label="Izberi zaposlenega" options={zaposleni} required={true}><option>Izberi zaposlenega</option></Select>}
+                        <Select onChange={(e)=>{
+                            setShowSupplier(e.target.value === "V Uporabi");
+                        }} name="stanje" label="Stanje" options={stanje} required={true}><option>stanje...</option></Select>
                         <TextArea name="description" label="Opis" placeholder="Dodaten opis" />
 
                         <button
