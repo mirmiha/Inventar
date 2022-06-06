@@ -1,23 +1,7 @@
-## React Redux Inventory Manager Backend
+ZAGON APLIKACIJE
 
-Backend for [react redux inventory manager](https://github.com/martin-nderitu/react-redux-inventory-manager)
-
-
-### To get started
-
-1. Clone this repo and ``cd inventory-manager-backend``
-2. Run ``npm install`` or ``yarn install``
-3. Create a ``.env`` file in the root directory with the following
-   values (provide your own values):
-   ```
-   PORT=
-   NODE_ENV=
-   DB_NAME=
-   TEST_DB_NAME=
-   DB_HOST=
-   DB_USER=
-   DB_PASSWORD=
-   DB_DIALECT=
-   ```
-
-4. Run `npm start` or `yarn start` to start the app
+1. Kloniraj repository
+2. V terminalu zaženi ``npm install`` ali ``yarn install`` v obeh mapah ``back`` in ``front``
+3. V mapi back preglej datoteko ``.env`` in zamenjaj podatke po potrebi
+4. v phpmyadminu kreiraj novo databazo z imenom ``inventar``
+5. Zaženi ``back`` ter ``front`` v terminalu z ukazom `npm start`.
