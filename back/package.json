@@ -1,10 +1,10 @@
 {
-  "name": "inventory-manager-backend",
+  "name": "inventar",
   "version": "1.0.0",
   "main": "dist/app.js",
   "type": "module",
-  "author": "martin",
-  "license": "MIT",
+  "author": "skupina3",
+  "license": "FERI",
   "scripts": {
     "build": "rimraf dist && tsc",
     "preserve": "yarn run build",
