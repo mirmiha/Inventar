@@ -3,14 +3,14 @@ INSERT INTO `categories` (`id`, `name`, `description`, `createdAt`, `updatedAt`)
 ('3f07fd21-01c1-4b0b-9910-9e3954faedf0', 'Laptop Lenovo', 'prenosni racunalnik', '2022-05-30 13:02:18', '2022-05-30 13:02:18'),
 ('6a752188-cc6f-4d8a-ac77-638fdcb3939d', 'Stol', NULL, '2022-05-30 13:10:48', '2022-05-30 13:10:48'),
 ('903c74f6-1578-4f09-95e0-3b80c7988155', 'Pisarniska Miza', NULL, '2022-05-30 13:10:29', '2022-05-30 13:10:29'),
-('9454d80d-88c6-47b9-9560-da9d5523a3bd', 'Monitor Mali', 'velikost 24 inch;', '2022-05-30 13:06:04', '2022-05-30 13:08:55'),
+('9454d80d-88c6-47b9-9560-da9d5523a3bd', 'Monitor Mali', 'velikost 24 inch', '2022-05-30 13:06:04', '2022-05-30 13:08:55'),
 ('aaece969-3bd1-44c9-bc3c-752b4d6b4015', 'Macbook', 'prenosni racunalnik', '2022-05-30 13:04:57', '2022-05-30 13:04:57'),
 ('b20fcc9a-da66-4ccb-bc0f-dcc70d3d6aa8', 'Laptop Asus', 'prenosni racunalnik', '2022-05-30 13:01:59', '2022-05-30 13:01:59'),
 ('c276f1af-c5ec-4be6-a2d9-95481f3947eb', 'Laptop Dell', 'prenosni racunalnik', '2022-05-30 13:01:43', '2022-05-30 13:01:43'),
-('c8c8c25c-93f3-48a8-8c33-9380ca44694d', 'Monitor Veliki', 'velikost 34 inch;', '2022-05-30 13:07:03', '2022-05-30 13:09:17'),
+('c8c8c25c-93f3-48a8-8c33-9380ca44694d', 'Monitor Veliki', 'velikost 34 inch', '2022-05-30 13:07:03', '2022-05-30 13:09:17'),
 ('cf87334c-7a30-459a-8bb5-ba6765b26cef', 'Docking Station', 'Priklopna postaja', '2022-05-30 13:10:08', '2022-05-30 13:10:08'),
 ('e0752988-d361-4614-9f34-cd2d9812c529', 'Apple', 'tretretre', '2022-06-03 16:31:34', '2022-06-03 16:31:34'),
-('fdea2ab4-9f20-4d18-a2ac-ec379087e4ab', 'Monitor Srednji', 'velikost 27 inch;', '2022-05-30 13:06:34', '2022-05-30 13:09:07');
+('fdea2ab4-9f20-4d18-a2ac-ec379087e4ab', 'Monitor Srednji', 'velikost 27 inch', '2022-05-30 13:06:34', '2022-05-30 13:09:07');
 
 INSERT INTO `suppliers` (`id`, `name`, `phone`, `email`, `createdAt`, `updatedAt`) VALUES
 ('30ea9cff-617c-417b-9417-92ba97d150bd', 'Anja', '041567497', 'anja@gmail.com', '2022-05-30 15:54:18', '2022-05-30 15:55:03'),
