@@ -6,7 +6,32 @@ Spletna aplikacija Inventar je rešitev, ki uporabnikom omogoča, da enostavneje
 
 Naša rešitev je v celoti sestavljene iz spletne aplikacije in je namenjena vsem, ki opravljajo inventuro. Za uporabo aplikacije se je naprej potrebno vpisati z Google računom. V aplikaciji je omogočen pregled, dodajanje, spreminjanje ter brisanje vseh različnih kategorij, vseh zaposlenih ter seveda vseh produktov kateri pa imajo tudi svojo unikatno QR kodo. Omogočeno je tudi filtriranje po zaposlenih, tako, da ima vsak zaposlen lažji pregled nad tem, kaj je napisano na njegovo ime.
 
-[slika] (../main/Screens/Kategorije.png)
+<p float="left">
+
+<img src="https://github.com/mirmiha/Inventar/blob/main/Screens/Filtriranje%20produktov.png" width="500" height="200" />
+
+<img src="https://github.com/mirmiha/Inventar/blob/main/Screens/Kategorije.png" width="500" height="200" />
+
+</p>
+<p float="left">
+
+<img src="https://github.com/mirmiha/Inventar/blob/main/Screens/Produkti.png" width="500" height="200" />
+
+<img src="https://github.com/mirmiha/Inventar/blob/main/Screens/Zaposleni.png" width="500" height="200" />
+
+</p>
+
+ ### QR-koda ter skeniranje
+
+Unikatno generirane QR-kode skeniramo in tako pridobimo vse potrebne podatke iz produktov
+
+<img src="https://github.com/mirmiha/Inventar/blob/main/Screens/QR-koda.png" width="500" height="200" />
+
+<img src="https://github.com/mirmiha/Inventar/blob/main/Screens/IzpisQR.png" width="500" height="200" />
+
+
+
+
 
 ## Elektronsko vodenje inventarja (ASSET MANAGEMENT)
 
