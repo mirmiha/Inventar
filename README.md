@@ -57,9 +57,13 @@ Unikatno generirane QR-kode skeniramo in tako pridobimo vse potrebne podatke iz 
 
 ## ARHITEKTURA
 
-Aplikacija ima enostavno arhitekturo
+Aplikacija ima enostavno arhitekturo. Vsebuje tabele zaposlenih, kategorij ter produktov.
 
 <img src="https://github.com/mirmiha/Inventar/blob/main/Screens/baza.png" width="650" height="300" />
+
+
+Skripta s testnimi podatki v bazi
+[Skripta](https://github.com/mirmiha/Inventar/blob/main/baza/InventarSkripta.sql)
 
 
 ## TEHNOLOŠKI SKLAD
