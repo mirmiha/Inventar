@@ -6,9 +6,22 @@ Spletna aplikacija Inventar je rešitev, ki uporabnikom omogoča, da enostavneje
 
 Naša rešitev je v celoti sestavljene iz spletne aplikacije in je namenjena vsem, ki opravljajo inventuro. Za uporabo aplikacije se je naprej potrebno vpisati z Google računom. V aplikaciji je omogočen pregled, dodajanje, spreminjanje ter brisanje vseh različnih kategorij, vseh zaposlenih ter seveda vseh produktov kateri pa imajo tudi svojo unikatno QR kodo. Omogočeno je tudi filtriranje po zaposlenih, tako, da ima vsak zaposlen lažji pregled nad tem, kaj je napisano na njegovo ime.
 
+[slika] (../main/Screens/Kategorije.png)
+
 ## Elektronsko vodenje inventarja (ASSET MANAGEMENT)
 
--Razvoj spletne aplikacije za vodenje inventarja IT opreme znotraj podjetja, kjer so vsi kosi opreme označeni s QR kodo kjer se nahajajo vsi podatki z ohišja/embalaže t.j. Serijska številka, [readmore] številka inventarja(Product ID), model,... Naknadno se potem izpolni stanje kosa opreme ali je ta v uporabi, v skladišču ali pa upokojen(zlomljen, pokvarjen, prodan). Ob skeniranju QR kode se uporabniku na napravi izpiše izkaznica izdelka (serijska stevilka, ime, stanje, kdo je lastnik...). V bazi je seznam zaposlenih katerim se lahko dodeli lastništvo opreme.
+-Razvoj spletne aplikacije za vodenje inventarja IT opreme znotraj podjetja, kjer so vsi kosi opreme označeni s QR kodo kjer se nahajajo vsi podatki z ohišja/embalaže t.j. Serijska številka, številka inventarja(Product ID), model,... Naknadno se potem izpolni stanje kosa opreme ali je ta v uporabi, v skladišču ali pa upokojen(zlomljen, pokvarjen, prodan). Ob skeniranju QR kode se uporabniku na napravi izpiše izkaznica izdelka (serijska stevilka, ime, stanje, kdo je lastnik...). V bazi je seznam zaposlenih katerim se lahko dodeli lastništvo opreme.
+
+
+
+
+
+
+
+
+
+
+
 
 
 React Native  <br />

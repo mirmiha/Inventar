@@ -35,9 +35,7 @@ export default function Navbar() {
                             <NavLink to="/suppliers" className="nav-link text-white">Zaposleni</NavLink>
                         </li>
 
-                        <li className="nav-item">
-                            <NavLink to="/" className="nav-link text-white" >QR kode</NavLink>
-                        </li>
+                
 
                       
                     </ul>
