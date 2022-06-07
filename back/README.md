@@ -10,6 +10,9 @@ ZAGON APLIKACIJE
 
 ### Primer ``.env``
 
+````
+```
+
 PORT="5000"
 NODE_ENV="development"
 DB_NAME="inventar"
@@ -18,3 +21,6 @@ DB_HOST="localhost"
 DB_USER="root"
 DB_PASSWORD=""
 DB_DIALECT="mysql"
+
+```
+````

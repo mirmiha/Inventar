@@ -36,7 +36,7 @@ Unikatno generirane QR-kode skeniramo in tako pridobimo vse potrebne podatke iz 
 <img src="https://github.com/mirmiha/Inventar/blob/main/Screens/IzpisQR.png" width="500" height="1000" />
 
 
-<p><img align ="right" src="https://github.com/mirmiha/Inventar/blob/main/Screens/PrikazDelovanja.gif" widt="500" height="1000" />
+<img src="https://github.com/mirmiha/Inventar/blob/main/Screens/PrikazDelovanja.gif" widt="500" height="1000" />
 
 ````
 ```
@@ -59,7 +59,7 @@ Unikatno generirane QR-kode skeniramo in tako pridobimo vse potrebne podatke iz 
 
 Aplikacija ima enostavno arhitekturo
 
-<img src="https://github.com/mirmiha/Inventar/blob/main/Screens/baza.png" width="500" height="300" />
+<img src="https://github.com/mirmiha/Inventar/blob/main/Screens/baza.png" width="650" height="300" />
 
 
 ## TEHNOLOŠKI SKLAD
@@ -94,7 +94,7 @@ Aplikacija ima enostavno arhitekturo
 
 
 
-<!-->
+<!--
 React Native  <br />
 Generirat je treba QR nalepke z izkaznico asseta  <br />
 https://github.com/microsoft/InQRy predlog za generiranje QR kod kjer se potem shranijo informcije (pyhton)  <br />
