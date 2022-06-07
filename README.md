@@ -63,7 +63,7 @@ Aplikacija ima enostavno arhitekturo. Vsebuje tabele zaposlenih, kategorij ter p
 
 
 Skripta s testnimi podatki v bazi
-[Skripta](https://github.com/mirmiha/Inventar/blob/main/baza/InventarSkripta.sql)
+[Skripta](https://github.com/mirmiha/Inventar/blob/main/baza/vnosniPodatki.sql)
 
 
 ## TEHNOLOŠKI SKLAD
