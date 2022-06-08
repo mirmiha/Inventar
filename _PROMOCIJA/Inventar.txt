@@ -1,0 +1,28 @@
+Inventar
+
+Spletna aplikacija Inventar je rešitev, ki uporabnikom omogoča, da enostavneje in hitreje opravijo z inventuro.
+S pomočjo mobilnega telefona ali tablice skeniramo QR kodo, tako pa pridobimo podatke o skeniranem produktu.
+
+Leto izdelave: 2022
+
+Jure Trtnik
+Eleonora Loshkoska
+Miha Mir
+
+Domača stran: https://url.si/
+Vir podatkov: https://url.si/
+...
+Koda: https://github.com/mirmiha/Inventar.git
+
+Kategorizacija: namizna aplikacija, spletna aplikacija
+
+Oznake: OdprtiPodatki, ReactJS, TypeScripts, JavaScript, NodeJS, Extreme Programming (XP), GitHub, Express, MySql, Firebase
+
+Opis projekta:
+
+-Razvoj spletne aplikacije za vodenje inventarja IT opreme znotraj podjetja,
+kjer so vsi kosi opreme označeni s QR kodo. Znotraj QR kode se nahajajo vsi podatki iz ohišja/embalaže t.j. Serijska številka, številka inventarja(Product ID), model,...
+Naknadno se po tem izpolni stanje kosa opreme ali je ta v uporabi, v skladišču ali pa upokojen(zlomljen, pokvarjen, prodan). 
+Ob skeniranju QR kode se uporabniku na napravi izpiše izkaznica izdelka (serijska stevilka, ime, stanje, kdo je lastnik...). 
+V bazi je seznam zaposlenih katerim se lahko dodeli lastništvo opreme. Omogočeno je tudi filtriranje podatkov. Na ta način lahko vidimo vse
+produkte, ki so napisani na posameznega zaposlenega. To poizvedbo lahko na koncu tudi exportiramo v Excel preglednico.

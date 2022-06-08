@@ -84,7 +84,7 @@ export const productRules: ValidationRules = {
                     }
                 });
               //  if (rows.length) { return rows.map( (row) => row.id) }
-               // else { return null }
+                //else { return null }
             }),
         dateFrom,
         dateTo,
