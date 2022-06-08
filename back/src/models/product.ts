@@ -151,18 +151,18 @@ export const ProductFactory = (sequelize: Sequelize) => {
     })
     .then(function() {
         Product.create({
-            id : '0f6de1b4-f116-40e1-bd91-1b0286042e7799',
-            name : 'LaptopJure',
+            id : '0f6de1b4-f116-40e1-bd91-1b0286042e77',
+            name : 'testststst',
             serijskaStevilka: '768GHUG67',
             stevilkaInventarja: '768',
             datum: '2022-05-12',
             model: 'testni model',
             stanje: 'V Skladišču',
-            descripton: 'Juretov Laptop',
+            descripton: 'priklopna postaja za nika',
             createdAt: '2022-06-06 12:29:09',
             updatedAt: '2022-06-06 12:29:09',
-            categoryId: 'cf87334c-7a30-459a-8bb5-ba6765b26cef99',
-            supplierId: '311fff50-56ae-4071-a4f2-2b4a3963d85f99'
+            categoryId: 'cf87334c-7a30-459a-8bb5-ba6765b26cef',
+            supplierId: '311fff50-56ae-4071-a4f2-2b4a3963d85f'
 
         })
     });

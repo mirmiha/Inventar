@@ -77,8 +77,8 @@ export const SupplierFactory = (sequelize: Sequelize) => {
     })
     .then(function() {
         Supplier.create({
-            id: '311fff50-56ae-4071-a4f2-2b4a3963d85f99',
-            name: 'Jure',
+            id: '311fff50-56ae-4071-a4f2-2b4a3963d85f',
+            name: 'juretestet',
             phone: '041567497',
             email: 'jure.trtnik@student.um.si',
             createdAt: '2022-05-30 15:42:22',

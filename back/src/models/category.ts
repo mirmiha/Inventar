@@ -73,9 +73,9 @@ export const CategoryFactory = (sequelize: Sequelize) => {
     })
     .then(function() {
         Category.create({
-            id: 'cf87334c-7a30-459a-8bb5-ba6765b26cef99',
-            name: 'Laptop',
-            description: 'zelo zmogljiv',
+            id: 'cf87334c-7a30-459a-8bb5-ba6765b26cef',
+            name: 'testtest',
+            description: 'tetetetetest',
             createdAt: '2022-05-30 13:10:48',
             updatedAt: '2022-05-30 13:10:48'
 
