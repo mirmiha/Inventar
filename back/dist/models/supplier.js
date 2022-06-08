@@ -28,6 +28,19 @@ export const SupplierFactory = (sequelize) => {
     }, {
         tableName: "suppliers",
     });
+    sequelize.sync({
+        force: true
+    })
+        .then(function () {
+        Supplier.create({
+            id: '311fff50-56ae-4071-a4f2-2b4a3963d85f',
+            name: 'juretestet',
+            phone: '041567497',
+            email: 'jure.trtnik@student.um.si',
+            createdAt: '2022-05-30 15:42:22',
+            updatedAt: '2022-05-30 15:42:22'
+        });
+    });
     // @ts-ignore
     Supplier.associate = (models) => {
         Supplier.hasMany(models.Product, {

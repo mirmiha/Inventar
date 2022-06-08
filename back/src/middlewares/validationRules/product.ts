@@ -83,8 +83,8 @@ export const productRules: ValidationRules = {
                         name: { [Op.like]: `%${categoryName}%` }
                     }
                 });
-                if (rows.length) { return rows.map( (row) => row.id) }
-                else { return null }
+              //  if (rows.length) { return rows.map( (row) => row.id) }
+               // else { return null }
             }),
         dateFrom,
         dateTo,

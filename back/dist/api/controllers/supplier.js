@@ -23,7 +23,7 @@ async function create(req, res, next) {
     try {
         const { name, phone, email } = req.body;
         const supplier = await Supplier.create({ name, phone, email });
-        if (supplier.dataValues) {
+        if (supplier.getDataValue) {
             return res.status(201).json({ supplier });
         }
         else {

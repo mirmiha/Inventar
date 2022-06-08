@@ -40,7 +40,7 @@ async function create(req, res, next) {
             model,
             description,
         });
-        if (product.dataValues) {
+        if (product.getDataValue) {
             return res.status(201).json({ product });
         }
         else {

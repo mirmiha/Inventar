@@ -53,7 +53,7 @@ async function create(req: Request, res: Response, next: NextFunction) {
       model,
       description,
     });
-    if (product.dataValues) {
+    if (product.getDataValue) {
       return res.status(201).json({ product });
     } else {
       return res.status(400).json({

@@ -27,7 +27,7 @@ async function create(req: Request, res: Response, next: NextFunction) {
     try {
         const { name, phone, email } = req.body;
         const supplier = await Supplier.create({ name, phone, email });
-        if (supplier.dataValues) {
+        if (supplier.getDataValue) {
             return res.status(201).json({ supplier });
         } else {
             return res.status(400).json({

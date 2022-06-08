@@ -26,7 +26,7 @@ async function create(req: Request, res: Response, next: NextFunction) {
     try {
         const { name, description } = req.body;
         const category = await Category.create({ name, description });
-        if (category.dataValues) {
+        if (category.getDataValue) {
             return res.status(201).json({ category });
         } else {
             return res.status(400).json({

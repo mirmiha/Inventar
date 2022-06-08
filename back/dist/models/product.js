@@ -57,6 +57,25 @@ export const ProductFactory = (sequelize) => {
     }, {
         tableName: "products",
     });
+    sequelize.sync({
+        force: true
+    })
+        .then(function () {
+        Product.create({
+            id: '0f6de1b4-f116-40e1-bd91-1b0286042e77',
+            name: 'testststst',
+            serijskaStevilka: '768GHUG67',
+            stevilkaInventarja: '768',
+            datum: '2022-05-12',
+            model: 'testni model',
+            stanje: 'V Skladišču',
+            descripton: 'priklopna postaja za nika',
+            createdAt: '2022-06-06 12:29:09',
+            updatedAt: '2022-06-06 12:29:09',
+            categoryId: 'cf87334c-7a30-459a-8bb5-ba6765b26cef',
+            supplierId: '311fff50-56ae-4071-a4f2-2b4a3963d85f'
+        });
+    });
     // @ts-ignore
     Product.associate = (models) => {
         Product.belongsTo(models.Category, {
@@ -73,6 +92,11 @@ export const ProductFactory = (sequelize) => {
                 allowNull: true
             }
         });
+        /*
+        Product.create(models.Supplier,{
+            id:
+        })
+        */
         /* Product.hasMany(models.Purchase, {
              as: "purchases",
              foreignKey: {

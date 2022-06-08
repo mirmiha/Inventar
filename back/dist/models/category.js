@@ -22,6 +22,18 @@ export const CategoryFactory = (sequelize) => {
     }, {
         tableName: "categories",
     });
+    sequelize.sync({
+        force: true
+    })
+        .then(function () {
+        Category.create({
+            id: 'cf87334c-7a30-459a-8bb5-ba6765b26cef',
+            name: 'testtest',
+            description: 'tetetetetest',
+            createdAt: '2022-05-30 13:10:48',
+            updatedAt: '2022-05-30 13:10:48'
+        });
+    });
     // @ts-ignore
     Category.associate = (models) => {
         Category.hasMany(models.Product, {

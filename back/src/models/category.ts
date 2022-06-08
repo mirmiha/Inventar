@@ -47,7 +47,7 @@ export interface CategoryInstance extends Model<CategoryAttributes, CategoryCrea
 }
 
 export const CategoryFactory = (sequelize: Sequelize) => {
-    const Category = sequelize.define<CategoryInstance>("Category", {
+    const Category = sequelize.define("Category", {
         id: {
             type: DataTypes.UUID,
             defaultValue: DataTypes.UUIDV4,
@@ -67,6 +67,20 @@ export const CategoryFactory = (sequelize: Sequelize) => {
         },
     }, {
         tableName: "categories",
+    })
+    sequelize.sync({
+        force: true 
+    })
+    .then(function() {
+        Category.create({
+            id: 'cf87334c-7a30-459a-8bb5-ba6765b26cef',
+            name: 'testtest',
+            description: 'tetetetetest',
+            createdAt: '2022-05-30 13:10:48',
+            updatedAt: '2022-05-30 13:10:48'
+
+        })
+
     });
 
     // @ts-ignore
