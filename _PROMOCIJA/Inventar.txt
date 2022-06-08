@@ -16,7 +16,7 @@ Koda: https://github.com/mirmiha/Inventar.git
 
 Kategorizacija: namizna aplikacija, spletna aplikacija
 
-Oznake: OdprtiPodatki, ReactJS, TypeScripts, JavaScript, NodeJS, Extreme Programming (XP), GitHub, Express, MySql, Firebase
+Oznake: OdprtiPodatki, ReactJS, TypeScripts, JavaScript, NodeJS, Extreme Programming (XP), GitHub, Express, MySql, Firebase, Knex.js
 
 Opis projekta:
 
