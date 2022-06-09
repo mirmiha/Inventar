@@ -1,11 +1,13 @@
 import React, { useMemo, useEffect, useCallback, useState } from "react";
-
 import { useGetProductsQuery, useDestroyProductMutation } from "./productSlice";
 import DataTable from "../../app/table/DataTable";
 import { Input } from "../../app/form/fields";
 import { Message } from "../../app/index";
 import { Category, Product, Supplier } from "../api";
 import ProductQRCode from "./ProductQRCode";
+import { ExcelExport } from '@progress/kendo-react-excel-export';
+import asseti from "./asseti.json";
+
 
 const ProductsSearchForm = () => (
   <Input
@@ -17,6 +19,8 @@ const ProductsSearchForm = () => (
     validation={false}
   />
 );
+
+
 
 export const ProductsList = React.memo(() => {
   const [query, setQuery] = useState("");
@@ -68,7 +72,11 @@ export const ProductsList = React.memo(() => {
     ],
     []
   );
-
+  const _export = React.useRef<ExcelExport | null>(null);
+  const excelExport = () => {
+    if (_export.current !== null) {
+      _export.current.save();
+    }}
   useEffect(() => {
     if (result.data?.error) {
       setMessage({ type: "danger", message: result.data.error });
@@ -106,8 +114,13 @@ export const ProductsList = React.memo(() => {
     [destroyProduct]
   );
 
+  
+
+  
+
   return (
     <>
+      <ExcelExport data={asseti} ref={_export}>
       <DataTable
         cols={cols}
         data={
@@ -127,7 +140,12 @@ export const ProductsList = React.memo(() => {
         searchFormInitialValues={{ supplier: "" }}
         SearchFormInputs={ProductsSearchForm}
       />
+      <button title="Export Excel"
+            className="k-button k-button-md k-rounded-md k-button-solid k-button-solid-primary"
+            onClick={excelExport}>  Export to Excel</button></ExcelExport> 
       <ProductQRCode product={selectedProduct} />
+      
+      
     </>
   );
 });
