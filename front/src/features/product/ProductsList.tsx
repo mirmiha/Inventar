@@ -7,10 +7,9 @@ import { Message } from "../../app/index";
 import { Category, Product, Supplier } from "../api";
 import ProductQRCode from "./ProductQRCode";
 
-
 const ProductsSearchForm = () => (
   <Input
-    name="name"
+    name="supplier"
     label="Name"
     type="search"
     placeholder="Vnesi ime zaposlenega"
@@ -78,6 +77,7 @@ export const ProductsList = React.memo(() => {
 
   const handleQuery = useCallback((query: string) => {
     if (query.length) {
+      console.log(query);
       setQuery(query);
     }
   }, []);
@@ -124,7 +124,7 @@ export const ProductsList = React.memo(() => {
         createItemLink="/products/create"
         handleQuery={handleQuery}
         destroyChecked={destroyChecked}
-        searchFormInitialValues={{ name: "" }}
+        searchFormInitialValues={{ supplier: "" }}
         SearchFormInputs={ProductsSearchForm}
       />
       <ProductQRCode product={selectedProduct} />

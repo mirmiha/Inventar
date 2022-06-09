@@ -1,46 +1,54 @@
-import {query, body} from "express-validator";
+import { query, body } from "express-validator";
 import Sequelize from "sequelize";
 import toTitleCase from "../../libs/toTitleCase.js";
 import db from "../../models/index.js";
-import {pagination} from "./common/pagination.js";
-import {sorting} from "./common/sorting.js";
-import {dateFrom, dateTo} from "./common/filters.js";
-import {description} from "./common/description.js";
-import {destroy} from "./common/destroy.js";
-import {read} from "./common/read.js";
-import {ValidationRules} from "./index.js";
+import { pagination } from "./common/pagination.js";
+import { sorting } from "./common/sorting.js";
+import { dateFrom, dateTo } from "./common/filters.js";
+import { description } from "./common/description.js";
+import { destroy } from "./common/destroy.js";
+import { read } from "./common/read.js";
+import { ValidationRules } from "./index.js";
 import itemExists from "./common/itemExists.js";
 
 const Op = Sequelize.Op;
-const {Category, Product} = db;
+const { Category, Product, Supplier } = db;
 
 const commonRules = [
-    body("categoryId")
-        .trim().escape().notEmpty().withMessage("Category id is required").bail()
-        .custom(async (id: string) => {
-            const category = await Category.findByPk(id);
-            if (category === null) {
-                throw new Error("Category not found");
-            }
-            return true;
-        }),
+  body("categoryId")
+    .trim()
+    .escape()
+    .notEmpty()
+    .withMessage("Category id is required")
+    .bail()
+    .custom(async (id: string) => {
+      const category = await Category.findByPk(id);
+      if (category === null) {
+        throw new Error("Category not found");
+      }
+      return true;
+    }),
 
-    body("name")
-        .trim().escape().notEmpty().withMessage("Product name is required")
-        .isLength({ min: 2, max: 50 }).withMessage("Product name must be between 2 and 50 characters")
-        .bail()
-        .custom( async (name: string, {req}) => {
-            const product = await Product.findOne({ where : { name } });
-            if(itemExists(product, req.body.id)) {
-                return Promise.reject("A product with this name already exists");
-            }
-            return true;
-        })
-        .customSanitizer((name: string) => {
-            return toTitleCase(name);
-        }),
+  body("name")
+    .trim()
+    .escape()
+    .notEmpty()
+    .withMessage("Product name is required")
+    .isLength({ min: 2, max: 50 })
+    .withMessage("Product name must be between 2 and 50 characters")
+    .bail()
+    .custom(async (name: string, { req }) => {
+      const product = await Product.findOne({ where: { name } });
+      if (itemExists(product, req.body.id)) {
+        return Promise.reject("A product with this name already exists");
+      }
+      return true;
+    })
+    .customSanitizer((name: string) => {
+      return toTitleCase(name);
+    }),
 
-    /*body("serijskaStevilka")
+  /*body("serijskaStevilka")
         .trim().escape().notEmpty().withMessage("Unit cost is required")
         .isDecimal({ decimal_digits: "1,2"} )
         .withMessage("Unit cost must not exceeding 2 decimal places")
@@ -72,50 +80,65 @@ const commonRules = [
 ];
 
 export const productRules: ValidationRules = {
-    filter: [
-        query("name")
-            .optional({ checkFalsy: true }).trim().escape(),
-        query("category")   // category name
-            .optional().trim().escape().bail()
-            .customSanitizer( async (categoryName: string) => {
-                const rows = await Category.findAll({
-                    where: {
-                        name: { [Op.like]: `%${categoryName}%` }
-                    }
-                });
-              //  if (rows.length) { return rows.map( (row) => row.id) }
-                //else { return null }
-            }),
-        dateFrom,
-        dateTo,
-        ...sorting,
-        ...pagination,
-    ],
+  filter: [
+    query("name").optional({ checkFalsy: true }).trim().escape(),
+    query("category") // category name
+      .optional()
+      .trim()
+      .escape()
+      .bail()
+      .customSanitizer(async (categoryName: string) => {
+        const rows = await Category.findAll({
+          where: {
+            name: { [Op.like]: `%${categoryName}%` },
+          },
+        });
+        //  if (rows.length) { return rows.map( (row) => row.id) }
+        //else { return null }
+      }),
+    query("supplier") // supplier name
+      .optional()
+      .trim()
+      .escape()
+      .bail()
+      .customSanitizer(async (supplierName: string) => {
+        const rows = await Supplier.findAll({
+          where: {
+            name: { [Op.like]: `%${supplierName}%` },
+          },
+        });
+        if (rows.length) {
+          return rows.map((row) => row["id"]);
+        } else {
+          return null;
+        }
+      }),
+    dateFrom,
+    dateTo,
+    ...sorting,
+    ...pagination,
+  ],
 
-    create: [ ...commonRules, description, ],
+  create: [...commonRules, description],
 
-    read: [
-        read("Product"),
-    ],
+  read: [read("Product")],
 
-    update: [
-        body("id")
-            .trim().escape().notEmpty().withMessage("Product id is required")
-            .custom(async (id: string) => {
-                const product = await Product.findByPk(id);
-                if (product === null) {
-                    throw new Error("Product not found");
-                }
-                return true;
-            }),
-        ...commonRules,
-        description,
-    ],
+  update: [
+    body("id")
+      .trim()
+      .escape()
+      .notEmpty()
+      .withMessage("Product id is required")
+      .custom(async (id: string) => {
+        const product = await Product.findByPk(id);
+        if (product === null) {
+          throw new Error("Product not found");
+        }
+        return true;
+      }),
+    ...commonRules,
+    description,
+  ],
 
-    destroy: [
-        destroy(
-            "Product",
-            async (pk) => await Product.findByPk(pk)
-        ),
-    ],
-}
+  destroy: [destroy("Product", async (pk) => await Product.findByPk(pk))],
+};

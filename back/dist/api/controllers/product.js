@@ -3,6 +3,7 @@ const { Product, Category, Supplier } = db;
 async function products(req, res, next) {
     try {
         const { filter, pagination } = res.locals;
+        console.log(filter);
         const { count, rows } = await Product.findAndCountAll({
             distinct: true,
             include: [

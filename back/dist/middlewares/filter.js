@@ -59,22 +59,24 @@ function category(req, res, next) {
     const conditions = [];
     if (name) {
         conditions.push({
-            name: { [Op.like]: `%${name}%` }
+            name: { [Op.like]: `%${name}%` },
         });
     }
     processFilters(req, res, next, conditions);
 }
 function product(req, res, next) {
-    const { name, category } = req.query;
+    const { name, category, supplier } = req.query;
     const conditions = [];
     if (name) {
         conditions.push({
-            name: { [Op.like]: `%${name}%` }
+            name: { [Op.like]: `%${name}%` },
         });
     }
     if (category) {
         conditions.push({ categoryId: category });
     }
+    if (supplier)
+        conditions.push({ supplierId: supplier });
     processFilters(req, res, next, conditions);
 }
 function purchase(req, res, next) {
@@ -101,7 +103,7 @@ function supplier(req, res, next) {
     const conditions = [];
     if (name) {
         conditions.push({
-            name: { [Op.like]: `%${name}%` }
+            name: { [Op.like]: `%${name}%` },
         });
     }
     processFilters(req, res, next, conditions);
@@ -115,5 +117,10 @@ function transfer(req, res, next) {
     processFilters(req, res, next, conditions);
 }
 export default {
-    category, product, purchase, sale, supplier, transfer
+    category,
+    product,
+    purchase,
+    sale,
+    supplier,
+    transfer,
 };
