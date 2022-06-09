@@ -9,8 +9,10 @@ Jure Trtnik
 Eleonora Loshkoska
 Miha Mir
 
-Domača stran: https://url.si/
-Vir podatkov: https://url.si/
+Aplikacija je deployable!
+Domača stran: https://github.com/mirmiha/Inventar/blob/main/front/src/App.tsx
+Vir podatkov: MySql - MariaDB 
+Vnosni podatki: https://github.com/mirmiha/Inventar/blob/main/baza/vnosniPodatki.sql
 ...
 Koda: https://github.com/mirmiha/Inventar.git
 
