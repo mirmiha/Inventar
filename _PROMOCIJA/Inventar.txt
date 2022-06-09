@@ -24,7 +24,8 @@ Opis projekta:
 
 -Razvoj spletne aplikacije za vodenje inventarja IT opreme znotraj podjetja,
 kjer so vsi kosi opreme označeni s QR kodo. Znotraj QR kode se nahajajo vsi podatki iz ohišja/embalaže t.j. Serijska številka, številka inventarja(Product ID), model,...
-Naknadno se po tem izpolni stanje kosa opreme ali je ta v uporabi, v skladišču ali pa upokojen(zlomljen, pokvarjen, prodan). 
+Naknadno se po tem izpolni stanje kosa opreme ali je ta v uporabi, v skladišču ali pa upokojen(zlomljen, pokvarjen, prodan). Če je stanje opreme 'v uporabi',
+potem zraven piše kdo je njen lastnik. Če pa je stanje opreme 'v skladišču' ali pa 'upokojen', v tem primeru pa lastnika opreme ne moremo dodati 
 Ob skeniranju QR kode se uporabniku na napravi izpiše izkaznica izdelka (serijska stevilka, ime, stanje, kdo je lastnik...). 
 V bazi je seznam zaposlenih katerim se lahko dodeli lastništvo opreme. Omogočeno je tudi filtriranje podatkov. Na ta način lahko vidimo vse
 produkte, ki so napisani na posameznega zaposlenega. To poizvedbo lahko na koncu tudi exportiramo v Excel preglednico.

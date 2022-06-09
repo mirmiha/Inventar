@@ -84,16 +84,17 @@ export const AddProductForm = () => {
                     <form onSubmit={props.handleSubmit}>
                         <Input name="name" label="Ime produkta" type="text" placeholder="Vnesi ime produkta" required={true} />
                         <Input name="serijskaStevilka" label="Serijska stevilka" type="text" placeholder="Vnesi serijsko stevilko" required={true} />
-                        <Input name="stevilkaInventarja" label="Stevilka inventarja" type="text" placeholder="Vnesi stanje" required={true} />
+                        <Input name="stevilkaInventarja" label="Stevilka inventarja" type="text" placeholder="Vnesi stevilko inventarja" required={true} />
                         <Input name="datum" label="Datum" type="date" min="1900-01-01" max="2100-01-01" placeholder="Enter number of items in store" required={true} />
                         <Input name="model" label="Naziv modela" type="text" placeholder="Vnesi naziv modela" required={true} />
                         <Select name="categoryId" label="Izberi kategorijo" options={categories} required={true}>
                             <option value="">Izberi kategorijo</option>
                         </Select>
-                        {showSupplier && <Select name="supplierId" label="Izberi zaposlenega" options={zaposleni} required={true}><option>Izberi zaposlenega</option></Select>}
+                        
                         <Select onChange={(e)=>{
                             setShowSupplier(e.target.value === "V Uporabi");
                         }} name="stanje" label="Stanje" options={stanje} required={true}><option>stanje...</option></Select>
+                        {showSupplier && <Select name="supplierId" label="Izberi zaposlenega" options={zaposleni} required={true}><option>Izberi zaposlenega</option></Select>}
                         <TextArea name="description" label="Opis" placeholder="Dodaten opis" />
 
                         <button
