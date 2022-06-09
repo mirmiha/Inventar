@@ -6,13 +6,14 @@ import { Input } from "../../app/form/fields";
 import { Message } from "../../app/index";
 import { Category, Product, Supplier } from "../api";
 import ProductQRCode from "./ProductQRCode";
+import * as XLSX from 'xlsx';
 
 const ProductsSearchForm = () => (
   <Input
     name="name"
     label="Name"
     type="search"
-    placeholder="Vnesi ime produkta"
+    placeholder="Vnesi ime zaposlenega"
     inline={true}
     validation={false}
   />
